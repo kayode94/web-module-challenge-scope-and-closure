@@ -27,8 +27,12 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * Counter1 contains another function nested within it, as well as let count variable declared within the function. Counter2 is a standard function that accesses a variable outside of the function.
+ * 
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ * Counter1 uses a closure because function counter() is accessing a variable within the counterMaker() function.
+ * 
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
@@ -56,11 +60,17 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+const calcInnings = function inning(){
+  let points = Math.floor(Math.random() * 3);
+  return points;
 }
+
+// inning();
+// console.log(calcInnings());
+// console.log(calcInnings());
+// console.log(calcInnings());
+// console.log(calcInnings());
+// console.log(calcInnings());
 
 /* Task 3: finalScore()
 
@@ -76,11 +86,20 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(cb, num){
+  let home = 0;
+  let away = 0;
+  for(let counter = 0; counter < num; counter++){
+    home = cb() + home;
+    away = cb() + away;
+    return {Homescore: home, Awayscore: away}
+  };//this closes the for loop
+};//this closes finalScore
+console.log(finalScore(calcInnings, 8))
+console.log(finalScore(calcInnings, 9))
+console.log(finalScore(calcInnings, 12))
+console.log(finalScore(calcInnings, 4))
 
-  /*Code Here*/
-
-}
 
 /* Task 4: 
 
@@ -89,7 +108,7 @@ Create a function called `scoreboard` that accepts the following parameters:
 (1) Callback function `inning` that you wrote above
 (2) A number of innings
 
-and returns the score at each pont in the game, like so:
+and returns the score at each point in the game, like so:
 
 1st inning: 0 - 2
 2nd inning: 1 - 3
@@ -103,8 +122,14 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(cb, numOfInnings) {
+  let homeScore = 0;
+  let awayScore = 0;
+  for(let counter = 0; counter < numOfInnings; counter++){
+    homeScore = cb() + homeScore;
+    awayScore = cb() + awayScore;
+    return {}
+  }
 }
 
 
