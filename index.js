@@ -65,7 +65,7 @@ const calcInnings = function inning(){
   return points;
 }
 
-// inning();
+// calcInnings();
 // console.log(calcInnings());
 // console.log(calcInnings());
 // console.log(calcInnings());
@@ -95,10 +95,10 @@ function finalScore(cb, num){
     return {Homescore: home, Awayscore: away}
   };//this closes the for loop
 };//this closes finalScore
-console.log(finalScore(calcInnings, 8))
-console.log(finalScore(calcInnings, 9))
-console.log(finalScore(calcInnings, 12))
-console.log(finalScore(calcInnings, 4))
+// console.log(finalScore(calcInnings, 8))
+// console.log(finalScore(calcInnings, 9))
+// console.log(finalScore(calcInnings, 12))
+// console.log(finalScore(calcInnings, 4))
 
 
 /* Task 4: 
@@ -122,14 +122,19 @@ and returns the score at each point in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(cb, numOfInnings) {
-  let homeScore = 0;
-  let awayScore = 0;
-  for(let counter = 0; counter < numOfInnings; counter++){
-    homeScore = cb() + homeScore;
-    awayScore = cb() + awayScore;
-    return {}
-  }
-}
+// function scoreboard(cb, numOfInnings) {
+//   let homeScore = 0;
+//   let awayScore = 0;
+//   for(let counter = 0; counter < numOfInnings; counter++){
+//     homeScore += cb();
+//     awayScore += cb();
+//   }
+//   return `${homeScore} - ${awayScore}`;
+// }
 
-
+// console.log("1st inning: " + scoreboard(calcInnings, 7));
+// console.log("2nd inning: " + scoreboard(calcInnings, 2));
+// console.log("3rd inning: " + scoreboard(calcInnings, 5));
+// console.log("4th inning: " + scoreboard(calcInnings, 8));
+// console.log("5th inning: " + scoreboard(calcInnings, 10));
+// console.log("final score: + scoreborde(calcInnings, 12")
