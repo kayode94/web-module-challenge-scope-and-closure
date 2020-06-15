@@ -138,4 +138,4 @@ Final Score: 6 - 10 */
 // console.log("3rd inning: " + scoreboard(calcInnings, 1));
 // console.log("4th inning: " + scoreboard(calcInnings, 10));
 // console.log("5th inning: " + scoreboard(calcInnings, 14));
-// console.log("final score: + scoreborde(calcInnings, 4)
+// console.log("final score:" + scoreboard(calcInnings, 4));
