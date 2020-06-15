@@ -38,7 +38,7 @@ function processFirstItem(stringList, callback) {
  *
 */
 
-// counter1 code
+// counter 1 code
 function counterMaker() {
   let count = 0;
   return function counter() {
@@ -48,7 +48,7 @@ function counterMaker() {
 
 const counter1 = counterMaker();
 
-// counter2 code
+// counter 2 code
 let count = 0;
 
 function counter2() {
@@ -95,10 +95,11 @@ function finalScore(cb, num){
     return {Homescore: home, Awayscore: away}
   };//this closes the for loop
 };//this closes finalScore
-// console.log(finalScore(calcInnings, 8))
-// console.log(finalScore(calcInnings, 9))
-// console.log(finalScore(calcInnings, 12))
-// console.log(finalScore(calcInnings, 4))
+
+// console.log(finalScore(calcInnings, 6))
+// console.log(finalScore(calcInnings, 10))
+// console.log(finalScore(calcInnings, 15))
+// console.log(finalScore(calcInnings, 3))
 
 
 /* Task 4: 
@@ -132,9 +133,9 @@ Final Score: 6 - 10 */
 //   return `${homeScore} - ${awayScore}`;
 // }
 
-// console.log("1st inning: " + scoreboard(calcInnings, 7));
-// console.log("2nd inning: " + scoreboard(calcInnings, 2));
-// console.log("3rd inning: " + scoreboard(calcInnings, 5));
-// console.log("4th inning: " + scoreboard(calcInnings, 8));
-// console.log("5th inning: " + scoreboard(calcInnings, 10));
-// console.log("final score: + scoreborde(calcInnings, 12")
+// console.log("1st inning: " + scoreboard(calcInnings, 8));
+// console.log("2nd inning: " + scoreboard(calcInnings, 3));
+// console.log("3rd inning: " + scoreboard(calcInnings, 1));
+// console.log("4th inning: " + scoreboard(calcInnings, 10));
+// console.log("5th inning: " + scoreboard(calcInnings, 14));
+// console.log("final score: + scoreborde(calcInnings, 4)
